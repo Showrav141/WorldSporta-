@@ -1,20 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
-// Added Link to the imports to resolve the missing name errors
 import { HashRouter as Router, Routes, Route, Navigate, useLocation, Link } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import News from './pages/News';
-import Scores from './pages/Scores';
-import Shop from './pages/Shop';
-import Game from './pages/Game';
-import AdminDashboard from './pages/AdminDashboard';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Cart from './pages/Cart';
-import OrderHistory from './pages/OrderHistory';
-import { User, NewsArticle, MatchScore, Product, Order, CartItem } from './types';
-import { INITIAL_NEWS, INITIAL_SCORES, INITIAL_PRODUCTS } from './constants';
+import Navbar from './components/Navbar.tsx';
+import Home from './pages/Home.tsx';
+import News from './pages/News.tsx';
+import Scores from './pages/Scores.tsx';
+import Shop from './pages/Shop.tsx';
+import Game from './pages/Game.tsx';
+import AdminDashboard from './pages/AdminDashboard.tsx';
+import Login from './pages/Login.tsx';
+import Register from './pages/Register.tsx';
+import Cart from './pages/Cart.tsx';
+import OrderHistory from './pages/OrderHistory.tsx';
+import { User, NewsArticle, MatchScore, Product, Order, CartItem } from './types.ts';
+import { INITIAL_NEWS, INITIAL_SCORES, INITIAL_PRODUCTS } from './constants.tsx';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -173,7 +172,6 @@ export default function App() {
             <div>
               <h4 className="text-[10px] font-black text-orange-500 uppercase tracking-[0.3em] mb-8">Navigation</h4>
               <ul className="text-slate-300 text-sm font-bold space-y-4">
-                {/* Fixed: Link component is now correctly imported and available */}
                 <li><Link to="/" className="hover:text-white transition-colors">Home Base</Link></li>
                 <li><Link to="/news" className="hover:text-white transition-colors">Editorial Feed</Link></li>
                 <li><Link to="/scores" className="hover:text-white transition-colors">Live Broadcast</Link></li>

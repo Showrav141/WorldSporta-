@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NewsArticle, SportCategory, User } from '../types';
-import { generateSportsNews } from '../services/geminiService';
+import { NewsArticle, SportCategory, User } from '../types.ts';
+import { generateSportsNews } from '../services/geminiService.ts';
 
 interface NewsProps {
   articles: NewsArticle[];
@@ -153,7 +154,7 @@ const News: React.FC<NewsProps> = ({ articles, setArticles, currentUser }) => {
         </aside>
       </div>
 
-      {/* Article Detail Modal (Same as before but refined styling) */}
+      {/* Article Detail Modal */}
       {selectedArticle && (
         <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-10 bg-slate-900/80 backdrop-blur-md">
           <div className="bg-white w-full max-w-5xl max-h-[90vh] rounded-[50px] overflow-hidden flex flex-col shadow-2xl">
