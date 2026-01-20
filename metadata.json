@@ -1,0 +1,8 @@
+{
+  "name": "Copy of WorldSporta - Premium Sports Hub",
+  "description": "A comprehensive sports platform featuring real-time scores, AI-powered news, a mini-game, and an integrated sports shop with a full admin dashboard.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
